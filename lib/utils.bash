@@ -41,16 +41,16 @@ download_release() {
   local kernel; kernel=$(uname -s | tr '[:upper:]' '[:lower:]')
   case "${arch}-${kernel}" in
   arm64-linux)
-    url="$GH_REPO/releases/download/v${version}/sup3-linux-aarch64-${version}.tar.gz"
+    url="$GH_REPO/releases/download/v${version}/sup3-linux-aarch64-v${version}.tar.gz"
     ;;
   x86_64-linux)
-    url="$GH_REPO/releases/download/v${version}/sup3-linux-x86_64-${version}.tar.gz"
+    url="$GH_REPO/releases/download/v${version}/sup3-linux-x86_64-v${version}.tar.gz"
     ;;
   arm64-darwin)
-    url="$GH_REPO/releases/download/v${version}/sup3-macos-aarch64-${version}.tar.gz"
+    url="$GH_REPO/releases/download/v${version}/sup3-macos-aarch64-v${version}.tar.gz"
     ;;
   x86_64-darwin)
-    url="$GH_REPO/releases/download/v${version}/sup3-macos-x64_64-${version}.tar.gz"
+    url="$GH_REPO/releases/download/v${version}/sup3-macos-x64_64-v${version}.tar.gz"
     ;;
   *)
     fail "Could not determine release URL"
